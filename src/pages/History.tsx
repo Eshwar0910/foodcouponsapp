@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowUpRight, ArrowDownLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
 
 const mockTransactions = [
   {
@@ -49,8 +50,9 @@ const History = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-md mx-auto">
+    <div className="min-h-screen bg-background">
+      <Header />
+      <div className="p-6">
         <div className="flex items-center gap-4 mb-8">
           <Button
             variant="ghost"

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
+import Header from "@/components/Header";
 
 const Send = () => {
   const navigate = useNavigate();
@@ -31,8 +32,9 @@ const Send = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-md mx-auto">
+    <div className="min-h-screen bg-background">
+      <Header />
+      <div className="p-6">
         <div className="flex items-center gap-4 mb-8">
           <Button
             variant="ghost"
@@ -82,7 +84,7 @@ const Send = () => {
 
             <Button
               onClick={handleSend}
-              className="w-full h-14 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity"
+              className="w-full h-14 text-lg font-semibold"
             >
               <SendIcon className="mr-2 h-5 w-5" />
               Send Money

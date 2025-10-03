@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import QRCode from "react-qr-code";
+import Header from "@/components/Header";
 
 const Receive = () => {
   const navigate = useNavigate();
@@ -17,8 +18,9 @@ const Receive = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-md mx-auto">
+    <div className="min-h-screen bg-background">
+      <Header />
+      <div className="p-6">
         <div className="flex items-center gap-4 mb-8">
           <Button
             variant="ghost"

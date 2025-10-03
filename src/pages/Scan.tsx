@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
+import Header from "@/components/Header";
 
 const Scan = () => {
   const navigate = useNavigate();
@@ -28,8 +29,9 @@ const Scan = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-md mx-auto">
+    <div className="min-h-screen bg-background">
+      <Header />
+      <div className="p-6">
         <div className="flex items-center gap-4 mb-8">
           <Button
             variant="ghost"
@@ -44,7 +46,7 @@ const Scan = () => {
 
         <div className="bg-card rounded-3xl p-6 shadow-card mb-4 animate-fade-in">
           <div className="aspect-square bg-secondary rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
+            <div className="absolute inset-0 bg-primary/10"></div>
             <div className="text-center z-10">
               <Camera className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
               <p className="text-muted-foreground">
@@ -85,7 +87,7 @@ const Scan = () => {
 
             <Button
               onClick={handleScanAndSend}
-              className="w-full h-14 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity"
+              className="w-full h-14 text-lg font-semibold"
             >
               <Camera className="mr-2 h-5 w-5" />
               Scan & Send
